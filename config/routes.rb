@@ -1,9 +1,13 @@
 PersonalWeb::Application.routes.draw do
-  get "static_pages/home"
+get 'static_pages/home'
+get 'static_pages/about'
+get 'static_pages/contact'
+get 'static_pages/message'
 
-  get "static_pages/about"
-
-  get "static_pages/contact"
+ # match '/', to: 'static_pages#home'
+  #match '/about',   to: 'static_pages#about'
+  #match '/contact', to: 'static_pages#contact'
+  #match '/message', to: 'static_pages#message'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
