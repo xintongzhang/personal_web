@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Authentication" do
+<<<<<<< HEAD
 
   subject { page }
 
@@ -10,6 +11,12 @@ describe "Authentication" do
     it { should have_selector('h1',    text: 'Sign in') }
     it { should have_selector('title', text: 'Sign in') }
 
+=======
+  
+  describe "signin" do
+    before { visit signin_path }
+    
+>>>>>>> sign-in-out
     describe "with valid information" do
       let(:user) { FactoryGirl.create(:user) }
       before do
@@ -24,5 +31,8 @@ describe "Authentication" do
       it { should_not have_link('Sign in', href: signin_path) }
     end
   end
+<<<<<<< HEAD
 
+=======
+>>>>>>> sign-in-out
 end

@@ -96,6 +96,7 @@ describe User do
     end
   end
 
+<<<<<<< HEAD
   describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
     before { visit edit_user_path(user) }
@@ -108,6 +109,12 @@ describe User do
 
     describe "with invalid information" do
       before { click_button "Save changes" }
+=======
+  describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
+>>>>>>> sign-in-out
 
       it { should have_content('error') }
     end

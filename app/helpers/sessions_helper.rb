@@ -21,3 +21,4 @@ module SessionsHelper
     cookies.delete(:remember_token)
   end
 end
+
