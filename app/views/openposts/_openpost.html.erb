@@ -3,4 +3,9 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(openpost.created_at) %> ago.
   </span>
+  <% if current_user?openpost.user) %>
+    <%= link_to "delete", openpost, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: openpost.content %>
+  <% end %>
 </li>
