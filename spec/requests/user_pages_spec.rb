@@ -4,6 +4,12 @@ describe "User pages" do
 
   subject { page }
 
+  describe "index" do
+
+    let(:user) { FactoryGirl.create(:user) }
+    end
+  end
+
   describe "signup page" do
     before { visit signup_path }
 
